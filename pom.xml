@@ -157,7 +157,6 @@
   </dependencies>
 
 
-
   <build>
     <finalName>art</finalName>
     <!--在IDEA中maven 默认编译的时候   只搬运src/main/java里面的java文件到target/classes,其他文件会被忽略-->

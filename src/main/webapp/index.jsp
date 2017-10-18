@@ -1,8 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
+
 <html>
 <head>
-	<title></title>
+	<title>Login</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- 引入bootstrap -->
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
@@ -24,47 +25,22 @@
 	</style>
 </head>
 <body>
-	<div class="container" id="top">
-		<div class="row" style="margin-top: 280px; ">
-			<div class="col-md-4"></div>
-			<div class="col-md-4" id="login-box">
-				<form class="form-horizontal" role="form" action="/login" id="from1" method="post">
-				  <div class="form-group">
-				    <label for="firstname" class="col-sm-3 control-label">用户id</label>
-				    <div class="col-sm-9">
-				      <input type="text" class="form-control" id="userID" placeholder="请输入名字" name="username">
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <label for="lastname" class="col-sm-3 control-label">密码</label>
-				    <div class="col-sm-9">
-				      <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password">
-				    </div>
-				  </div>
-				  <%--<div class="form-group">--%>
-				    <%--<div class="col-sm-offset-2 col-sm-10">--%>
-				      <%--<div class="checkbox">--%>
-				        <%--<label class="checkbox-inline">--%>
-							<%--<input type="radio" name="role" value="1" checked>管理员--%>
-						<%--</label>--%>
-						<%--<label class="checkbox-inline">--%>
-							<%--<input type="radio" name="role" value="2">老师--%>
-						<%--</label>--%>
-						<%--<label class="checkbox-inline">--%>
-							<%--<input type="radio" name="role" value="3">学生--%>
-						<%--</label>--%>
-				      <%--</div>--%>
-				    <%--</div>--%>
-				  <%--</div>--%>
-				  <div class="form-group pull-right" style="margin-right: 15px;">
-				    <div class="col-sm-offset-2 col-sm-10">
-				      <button type="submit" class="btn btn-default btn-info">登录</button>
-				    </div>
-				  </div>
-				</form>
-			</div>
-			<div class="col-md-4"></div>
-		</div>		
+<center>
+	<div>
+		<h1>欢迎登陆</h1>
+		<form action="LoginServlet" method="post">
+			<table>
+				<tr>
+					<td width="66" align="right"><font size="3">帐号：</font></td><td colspan="2"><input type="text" name="username" value="" style="width:200;height:25;"/></td>
+				</tr>
+				<tr>
+					<td align="right"><font size="3">密码：</font></td><td colspan="2"><input type="text" name="password"  style="width:200;height:25;"/></td>
+				</tr>
+				<tr><td colspan="3" align="center"><input type="submit" value="登录" style="width:130;height:30;"/></td></tr>
+			</table>
+		</form>
+		<a href="regist.jsp"><font size="2"><i>没有帐号？点击注册</i></font></a>
 	</div>
+</center>
 </body>
 </html>
