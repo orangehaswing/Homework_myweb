@@ -34,13 +34,13 @@
 <center>
     <div>
         <h1>注册</h1>
-        <form action="RegistServlet" method="post">
+        <form action="regist" method="post">
             请输入帐号：<input type="text" name="username"><br/>
             请输入密码：<input type="password" name="password"><br/>
             请确认密码：<input type="password" name="rpsw"><br/>
             <input type="submit" value="注册">
         </form>
-        <font color="red" size="2"> ${msg }</font>
+        <font color="red" size="2"></font>
     </div>
 </center>
 </body>

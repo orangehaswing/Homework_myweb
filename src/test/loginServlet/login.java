@@ -17,9 +17,9 @@ public class login extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        System.out.println("username :"+ username + "passwd :" +password);
+        request.setAttribute("msg2", "* fuck");
         String svc =(String) request.getSession().getAttribute("sessionverify");
-        String psw =new user().findUser(username);
+        String psw =new user().findUsername(username);
 
         if(psw ==null){
             request.setAttribute("username", username);

@@ -24,11 +24,12 @@
 
 	</style>
 </head>
+
 <body>
 <center>
 	<div>
 		<h1>欢迎登陆</h1>
-		<form action="LoginServlet" method="post">
+		<form action="login" method="post">
 			<table>
 				<tr>
 					<td width="66" align="right"><font size="3">帐号：</font></td><td colspan="2"><input type="text" name="username" value="" style="width:200;height:25;"/></td>
@@ -39,7 +40,7 @@
 				<tr><td colspan="3" align="center"><input type="submit" value="登录" style="width:130;height:30;"/></td></tr>
 			</table>
 		</form>
-		<a href="regist.jsp"><font size="2"><i>没有帐号？点击注册</i></font></a>
+		<a href="Regist.jsp"><font size="2"><i>没有帐号？点击注册</i></font></a>
 	</div>
 </center>
 </body>

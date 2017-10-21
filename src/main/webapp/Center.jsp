@@ -33,8 +33,11 @@
 </head>
 
 <body>
-<h1>这是主页</h1>
-<h2>${msg }</h2>
+<center>
+    <h1>这是主页</h1>
+    <h2>学生作业系统</h2>
+</center>
+
 </body>
 
 </html>
