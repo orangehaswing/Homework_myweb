@@ -14,7 +14,10 @@
     <servlet-class>test.loginServlet.regist</servlet-class>
   </servlet>
 
-
+  <servlet>
+    <servlet-name>Upload</servlet-name>
+    <servlet-class>test.Webfunc.Upload</servlet-class>
+  </servlet>
 
   <servlet-mapping>
     <servlet-name>login</servlet-name>
@@ -24,6 +27,11 @@
   <servlet-mapping>
     <servlet-name>regist</servlet-name>
     <url-pattern>/regist</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Upload</servlet-name>
+    <url-pattern>/Upload</url-pattern>
   </servlet-mapping>
 
   <welcome-file-list>

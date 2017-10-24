@@ -19,7 +19,10 @@
     <script src="/js/bootstrap.min.js"></script>
     <style type="text/css">
         body{
-            background: url(images/c.jpg)repeat;
+            background: url(images/d.jpg)repeat; /*pictures locate file*/
+            background-repeat:no-repeat;         /*control pictures location*/
+            background-size:860px 720px;
+            background-position-x:50%;
         }
         #login-box {
             /*border:1px solid #F00;*/
@@ -34,8 +37,15 @@
 
 <body>
 <center>
-    <h1>这是教师主页</h1>
+    <h1>这是学生主页</h1>
     <h2>学生作业系统</h2>
+    <form action="Upload" method="post" enctype="multipart/form-data">
+        选择一个文件:
+        <input type="file" name="uploadFile" />
+        <br/><br/>
+        <input type="submit" value="上传" />
+    </form>
+    <a href="FormulaEdit.jsp"><font size="４"><i>公式编辑器主页</i></font></a>
 </center>
 
 </body>
