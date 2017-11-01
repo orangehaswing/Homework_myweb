@@ -38,7 +38,7 @@
 <body>
 <center>
     <h1>这是公式编辑器主页</h1>
-
+    ${message}
 </center>
 
 </body>
