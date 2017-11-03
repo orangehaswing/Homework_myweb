@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ListFileServlet extends HttpServlet {
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //获取上传文件的目录
@@ -23,8 +24,7 @@ public class ListFileServlet extends HttpServlet {
         req.getRequestDispatcher("/listfile.jsp").forward(req, resp);
     }
 
-
-    private void listfile(File file, Map<String, String> fileNameMap) {
+    public void listfile(File file, Map<String, String> map) {
         //如果file代表的不是一个文件，而是一个目录
         if (!file.isFile()) {
             //列出该目录下的所有文件和目录
@@ -32,7 +32,7 @@ public class ListFileServlet extends HttpServlet {
             //遍历files[]数组
             for (File f : files) {
                 //递归
-                listfile(f, fileNameMap);
+                listfile(f, map);
             }
         } else {
             /**
@@ -42,7 +42,9 @@ public class ListFileServlet extends HttpServlet {
              */
             String realName = file.getName().substring(file.getName().indexOf("_") + 1);
             //file.getName()得到的是文件的原始名称，这个名称是唯一的，因此可以作为key，realName是处理过后的名称，有可能会重复
-            fileNameMap.put(file.getName(), realName);
+            map.put(file.getName(), realName);
         }
     }
+
+
 }

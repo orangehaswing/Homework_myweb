@@ -36,7 +36,9 @@
 <center>
     <h1>这是教师主页</h1>
     <h2>学生作业系统</h2>
-    <a href="listfile.jsp"><font size="４"><i>下载页面</i></font></a>
+    <form action="ListFileServlet" method="post">
+        <input type="submit" value="下载主页">
+    </form>
 </center>
 
 </body>

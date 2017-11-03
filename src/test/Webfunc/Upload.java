@@ -45,7 +45,6 @@ public class Upload extends HttpServlet {
             //按照传统方式获取数据
             return;
         }
-        System.out.println("判断文件可以读出");
 
         //4、使用ServletFileUpload解析器解析上传数据，解析结果返回的是一个List<FileItem>集合，每一个FileItem对应一个Form表单的输入项
         List<FileItem> list = null;
@@ -97,7 +96,7 @@ public class Upload extends HttpServlet {
         }
 
         req.setAttribute("message", message);
-        req.getRequestDispatcher("/FormulaEdit.jsp").forward(req, resp);
+        req.getRequestDispatcher("/message.jsp").forward(req, resp);
     }
 }
 

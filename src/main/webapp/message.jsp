@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -19,17 +18,16 @@
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <style type="text/css">
-        body {
-            background: url(images/d.jpg) repeat;
-            background-repeat: no-repeat;
-            background-size: 860px 720px;
-            background-position-x: 50%;
+        body{
+            background: url(images/d.jpg)repeat; /*pictures locate file*/
+            background-repeat:no-repeat;         /*control pictures location*/
+            background-size:860px 720px;
+            background-position-x:50%;
         }
-
         #login-box {
             /*border:1px solid #F00;*/
             padding: 35px;
-            border-radius: 15px;
+            border-radius:15px;
             background: #56666B;
             color: #fff;
         }
@@ -39,20 +37,9 @@
 
 <body>
 <center>
-    <h1>下载</h1>
-    <%--<!-- 遍历Map集合 -->--%>
-    <c:forEach var="me" items="${fileNameMap}" varStatus="status" >
-        <c:url  value="/Download" var="downurl">
-            <c:param name="filename" value="${me.key}"></c:param>
-        </c:url>
-        ${me.value}<a href="${downurl}">下载</a>
-        <br/>
-    </c:forEach>
-
-
-
-
+    <h1>这是message主页</h1>
+    ${message}
 </center>
-</body>
 
+</body>
 </html>
