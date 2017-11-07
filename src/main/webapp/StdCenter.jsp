@@ -46,6 +46,8 @@
         <input type="submit" value="上传" />
     </form>
     <a href="FormulaEdit.jsp"><font size="４"><i>公式编辑器主页</i></font></a>
+    <br/>
+    <a href="http://www.codecogs.com/latex/eqneditor.php">外部公式编辑器</a>
 </center>
 
 </body>

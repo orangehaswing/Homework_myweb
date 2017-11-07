@@ -23,7 +23,6 @@ public class Download extends HttpServlet {
         String fileSaveRootPath = this.getServletContext().getRealPath("/WEB-INF/upload");
 
         String path = fileSaveRootPath + "\\" + fileName;
-//        path = path.replaceAll("\\\\","");
 
         File file = new File(path);
 
@@ -31,14 +30,14 @@ public class Download extends HttpServlet {
 
         System.out.println("path:" + path + "   filesize:" + size);
 
-        //创建缓冲区
+
         //为了解决中文名称乱码问题 这里是设置文件下载后的名称
         resp.reset();
         resp.setHeader("Accept-Ranges", "bytes");
         //设置文件下载是以附件的形式下载
         resp.setHeader("Content-disposition", String.format("attachment; filename=\"%s\"", fileName));
         resp.addHeader("Content-Length", String.valueOf(size));
-
+        //创建缓冲区
         ServletOutputStream sos = resp.getOutputStream();
         FileInputStream in = new FileInputStream(file);
         BufferedOutputStream outputStream = new BufferedOutputStream(sos);
