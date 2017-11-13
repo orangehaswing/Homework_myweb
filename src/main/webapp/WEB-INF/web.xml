@@ -15,6 +15,11 @@
   </servlet>
 
   <servlet>
+    <servlet-name>VerifyCode</servlet-name>
+    <servlet-class>test.VerificationCode.VerifyCode</servlet-class>
+  </servlet>
+
+  <servlet>
     <servlet-name>Upload</servlet-name>
     <servlet-class>test.Webfunc.Upload</servlet-class>
   </servlet>
@@ -37,6 +42,11 @@
   <servlet-mapping>
     <servlet-name>regist</servlet-name>
     <url-pattern>/regist</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>VerifyCode</servlet-name>
+    <url-pattern>/VerifyCode</url-pattern>
   </servlet-mapping>
 
   <servlet-mapping>

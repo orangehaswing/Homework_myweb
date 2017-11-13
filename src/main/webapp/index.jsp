@@ -12,7 +12,7 @@
 	<script src="/js/bootstrap.min.js"></script>
 	<style type="text/css">
 	body{
-	   background: url(images/a.jpg)repeat;
+	   /*background: url(images/a.jpg)repeat;*/
 	}
 	#login-box {
 		/*border:1px solid #F00;*/
@@ -32,14 +32,22 @@
 		<form action="login" method="post">
 			<table>
 				<tr>
-					<td width="66" align="right"><font size="3">帐号：</font></td><td colspan="2"><input type="text" name="username" value="" style="width:200;height:25;"/></td>
+					<td width="66" align="right"><font size="3">帐号：</font></td>
+					<td colspan="2"><input type="text" name="username" value="" style="width:200;height:25;"/></td>
 				</tr>
 				<tr>
-					<td align="right"><font size="3">密码：</font></td><td colspan="2"><input type="text" name="password"  style="width:200;height:25;"/></td>
+					<td align="right"><font size="3">密码：</font></td>
+					<td colspan="2"><input type="text" name="password"  style="width:200;height:25;"/></td>
+				</tr>
+				<tr>
+					<td align="right"><font size="3">验证码：</font></td>
+					<td width="110px" valign="middle"><input type="text" name="verifycode" /></td>
+					<td width="90px" valign="middle"><img src="VerifyCode" id="verify" onclick="document.getElementById('verify').src='VerifyCode?'+Math.random();"></td>
 				</tr>
 				<tr><td colspan="3" align="center"><input type="submit" value="登录" style="width:130;height:30;"/></td></tr>
 			</table>
 		</form>
+
 		<a href="Regist.jsp"><font size="2"><i>没有帐号？点击注册</i></font></a>
 	</div>
 </center>

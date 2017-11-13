@@ -17,10 +17,15 @@ public class login extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        request.setAttribute("msg2", "* fuck");
+        String verifyc  = request.getParameter("verifycode");
         String svc =(String) request.getSession().getAttribute("sessionverify");
         String psw =new user().findUsername(username);
-
+        if(!svc.equalsIgnoreCase(verifyc)){
+            request.setAttribute("username", username);
+            request.setAttribute("msg1", "* 验证码错误");
+            request.getRequestDispatcher("/index.jsp").forward(request, response);
+            return;
+        }
         if(psw ==null){
             request.setAttribute("username", username);
             request.setAttribute("msg2", "* 用户不存在");

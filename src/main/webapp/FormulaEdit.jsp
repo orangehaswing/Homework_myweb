@@ -42,7 +42,7 @@
     </div>
     <div class="body">
         <div class="content">
-            <h1>JMEditor示例</h1>
+            <h1>JMEditor</h1>
             <p>
                 请您在后面的输入框中输入<span class="mark">x^2</span>：<span class="mathquill-editable"></span><br>
                 再试试<span class="mark">3/4</span>，<span class="mark">\sqrt x</span>或<span class="mark">\sin\alpha</span>，简直太棒了。
@@ -69,13 +69,5 @@
     </div>
 </div>
 </center>
-<%--<center>--%>
-    <%--<h1>这是公式编辑器主页</h1>--%>
-    <%--${message}--%>
-    <%--<c:url  value="http://www.codecogs.com/latex/eqneditor.php" var="downurl">--%>
-    <%--</c:url>--%>
-    <%--<a href="http://www.codecogs.com/latex/eqneditor.php">公式编辑器</a>--%>
-<%--</center>--%>
-
 </body>
 </html>
