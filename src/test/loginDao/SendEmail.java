@@ -12,11 +12,11 @@ import java.util.Date;
 import java.util.Properties;
 
 public class SendEmail {
-    public static final String HOST = "smtp.163.com";
+    public static final String HOST = "smtp.qq.com";
     public static final String PROTOCOL = "smtp";
-    public static final int PORT = 25;
-    public static final String FROM = "xxxxx@xx.com";//发件人的email
-    public static final String PWD = "123456";//发件人密码
+    public static final int PORT = 465;
+    public static final String FROM = "673556024@qq.com";//发件人的email
+    public static final String PWD = "gxl123147";//发件人密码
 
     /**
      * 获取Session

@@ -43,7 +43,7 @@ public class user {
         }
         return psw;
     }
-    public void addUser(String username,String psw){
+    public void addUser(String username,String psw,String stdID,String email){
         Connection con =null;
         PreparedStatement pstmt =null;
         try {
@@ -53,10 +53,12 @@ public class user {
             String password ="123456";
             Class.forName(driver);
             con = DriverManager.getConnection(url, user, password);
-            String sql = "INSERT INTO user VALUES(?,?)";
+            String sql = "INSERT INTO user VALUES(?,?,?,?)";
             pstmt = con.prepareStatement(sql);
             pstmt.setString(1, username);
             pstmt.setString(2, psw);
+            pstmt.setString(3, stdID);
+            pstmt.setString(4, email);
             pstmt.executeUpdate();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

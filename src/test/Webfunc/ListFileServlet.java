@@ -1,5 +1,7 @@
 package test.Webfunc;
 
+import test.JDBC.Connect2mySQL;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +16,9 @@ public class ListFileServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //获取上传文件的目录
-        String uploadFilePath = this.getServletContext().getRealPath("/WEB-INF/upload");
+//        String uploadFilePath = this.getServletContext().getRealPath("/WEB-INF/upload");
+        Connect2mySQL connect2mySQL = new Connect2mySQL();
+        String uploadFilePath = connect2mySQL.readFromMySQL();
         //存储要下载的文件名
         Map<String, String> fileNameMap = new HashMap<String, String>();
         //递归遍历filepath目录下的所有文件和目录，将文件的文件名存储到map集合中

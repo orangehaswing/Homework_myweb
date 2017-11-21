@@ -4,6 +4,7 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import test.JDBC.Connect2mySQL;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -21,6 +22,7 @@ public class Upload extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Connect2mySQL connect2mySQL = new Connect2mySQL();
         String savePath = this.getServletContext().getRealPath("/WEB-INF/upload");
         File file = new File(savePath);
         //判断上传文件的保存目录是否存在
@@ -32,7 +34,6 @@ public class Upload extends HttpServlet {
 
         //消息提示
         String message = "";
-        System.out.println("組件");
         //使用Apache文件上传组件处理文件上传步骤：
         //1、创建一个DiskFileItemFactory工厂
         DiskFileItemFactory factory = new DiskFileItemFactory();
@@ -62,7 +63,12 @@ public class Upload extends HttpServlet {
                 } else {//如果fileitem中封装的是上传文件
                     //得到上传的文件名称，
                     String filename = item.getName();
-                    System.out.println(filename);
+                    boolean result = connect2mySQL.add2MySQL(filename,savePath);
+
+                    if(!result){
+                        System.out.println("写入数据库错误");
+                    }
+
                     if (filename == null || filename.trim().equals("")) {
                         continue;
                     }
@@ -98,5 +104,6 @@ public class Upload extends HttpServlet {
         req.setAttribute("message", message);
         req.getRequestDispatcher("/message.jsp").forward(req, resp);
     }
+
 }
 

@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class ActivateEmail {
 
-    private EmailUserDao userDao;
+//    private user userDao;
     /**
      * 处理注册
      */

@@ -31,24 +31,31 @@
 		<h1>欢迎登陆</h1>
 		<form action="login" method="post">
 			<table>
+				<span>
 				<tr>
 					<td width="66" align="right"><font size="3">帐号：</font></td>
 					<td colspan="2"><input type="text" name="username" value="" style="width:200;height:25;"/></td>
 				</tr>
+				</span>
+				<span>
 				<tr>
 					<td align="right"><font size="3">密码：</font></td>
 					<td colspan="2"><input type="text" name="password"  style="width:200;height:25;"/></td>
 				</tr>
+				</span>
+				<span>
 				<tr>
 					<td align="right"><font size="3">验证码：</font></td>
 					<td width="110px" valign="middle"><input type="text" name="verifycode" /></td>
 					<td width="90px" valign="middle"><img src="VerifyCode" id="verify" onclick="document.getElementById('verify').src='VerifyCode?'+Math.random();"></td>
 				</tr>
+				</span>
 				<tr><td colspan="3" align="center"><input type="submit" value="登录" style="width:130;height:30;"/></td></tr>
 			</table>
 		</form>
-
 		<a href="Regist.jsp"><font size="2"><i>没有帐号？点击注册</i></font></a>
+		<br/>
+		<img src="/images/a.jpg"  alt="登录"/>
 	</div>
 </center>
 </body>

@@ -72,7 +72,9 @@
                 </tr>
             </table>
         </form>
-        <font color="red" size="2"></font>
+        <font color="red" size="2"> ${msg }</font>
+        <br/>
+        <img src="/images/b.jpg"  alt="注册"/>
     </div>
 </center>
 </body>

@@ -40,13 +40,12 @@ public class login extends HttpServlet {
         }
         if(psw.equals(password)){
             request.setAttribute("msg", "用户："+username+",登陆成功");
-            if(username.equals("admin") || username.equals("123")){
+            if(username.equals("admin")){
+                //teachers and admin login page
                 request.getRequestDispatcher("/Center.jsp").forward(request, response);
             }else{
                 request.getRequestDispatcher("/StdCenter.jsp").forward(request, response);
-            }//teachers and admin login page
-
-            //response.setHeader("Refresh","1;url=welcome.jsp");
+            }
         }
 
     }
