@@ -12,6 +12,10 @@
 <head>
     <title>Center</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <script type="text/javascript" src="jmeditor/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="jmeditor/JMEditor.js"></script>
+
     <!-- 引入bootstrap -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <!-- 引入JQuery  bootstrap.js-->
@@ -19,10 +23,10 @@
     <script src="/js/bootstrap.min.js"></script>
     <style type="text/css">
         body{
-            background: url(images/d.jpg)repeat; /*pictures locate file*/
-            background-repeat:no-repeat;         /*control pictures location*/
-            background-size:860px 720px;
-            background-position-x:50%;
+            /*background: url(images/d.jpg)repeat; !*pictures locate file*!*/
+            /*background-repeat:no-repeat;         !*control pictures location*!*/
+            /*background-size:860px 720px;*/
+            /*background-position-x:50%;*/
         }
         #login-box {
             /*border:1px solid #F00;*/
@@ -38,7 +42,9 @@
 <body>
 <center>
     <h1>这是message主页</h1>
-    ${message}
+    <div id="content" name="content" contentEditable="true" class="editDemo">
+    ${inform}
+    </div>
 </center>
 
 </body>

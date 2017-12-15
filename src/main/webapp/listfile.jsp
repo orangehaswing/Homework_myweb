@@ -40,17 +40,20 @@
 <body>
 <center>
     <h1>下载</h1>
+    学生答案：
+    <br>
+
+
     <%--<!-- 遍历Map集合 -->--%>
-    <c:forEach var="me" items="${fileNameMap}" varStatus="status" >
-        <c:url  value="/Download" var="downurl">
-            <c:param name="filename" value="${me.key}"></c:param>
+    <c:forEach items="${userinform}" var="info">
+        <c:url value="/ListFileServlet" var="downurl">
+            <c:param name="inform" value="${info.value}"></c:param>
         </c:url>
-        ${me.value}<a href="${downurl}">下载</a>
-        <br/>
+        <p>
+        学生${info.key}作业信息:<a href="${downurl}">显示作业内容</a>
+        <br>
+        </p>
     </c:forEach>
-
-
-
 
 </center>
 </body>

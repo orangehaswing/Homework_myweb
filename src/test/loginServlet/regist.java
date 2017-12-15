@@ -1,6 +1,5 @@
 package test.loginServlet;
 
-import test.loginDao.ActivateEmail;
 import test.loginDao.user;
 
 import java.io.IOException;

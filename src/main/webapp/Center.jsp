@@ -15,16 +15,22 @@
     <!-- 引入bootstrap -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <!-- 引入JQuery  bootstrap.js-->
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <%--<script src="/js/jquery-3.2.1.min.js"></script>--%>
+    <%--<script src="/js/bootstrap.min.js"></script>--%>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <script type="text/javascript" src="jmeditor/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="jmeditor/JMEditor.js"></script>
+
+
     <style type="text/css">
-        body{
+        body {
 
         }
+
         #login-box {
             /*border:1px solid #F00;*/
             padding: 35px;
-            border-radius:15px;
+            border-radius: 15px;
             background: #56666B;
             color: #fff;
         }
@@ -33,14 +39,25 @@
 </head>
 
 <body>
+
 <center>
     <h1>这是教师主页</h1>
     <h2>学生作业系统</h2>
-    <form action="ListFileServlet" method="post">
-        <input type="submit" value="下载主页">
+    <form action="Download" method="post">
+        <tr>
+        <textarea id="homework" name="homework" rows="3" cols="80"></textarea>
+        </tr>
+        <br>
+        <tr>
+            <td colspan="3" align="center"><input type="submit" value="发布作业"></td>
+        </tr>
+        <br>
+        <tr>
+            <td colspan="3" align="center"><input type="submit" value="作业提交名单"></td>
+        </tr>
     </form>
+
 </center>
 
 </body>
-
 </html>
