@@ -53,6 +53,8 @@
         <div class="body">
             <div class="content">
                 <h1>学生作业提交（内含公式编辑器）</h1>
+                <br/>
+                <br/>
                 <h2>公式测试</h2>
                 <p>
                     请您在后面的输入框中输入<span class="mark">x^2</span>：<span class="mathquill-editable"></span><br>
@@ -60,8 +62,7 @@
                         class="mark">\sin\alpha</span>，简直太棒了。
                 </p>
                 <p>
-                    题目：请写出泰勒公式
-                    <%--题目：<%=adminhomework%>--%>
+                    第一单元测试：请写出泰勒公式
                 </p>
                 <p>
                 <div id="content" name="content" contentEditable="true" class="editDemo">
@@ -80,7 +81,7 @@
                         <textarea id="textarea" name="textarea" rows="5" cols="20" class="contentArea"></textarea>
                     </p>
                     <p>
-                        用户：<input type="text" name="username" value="${username}">
+                        学生用户：<input type="text" name="username" cols="5" value="${username}">
                     </p>
                 </form>
                 <p>

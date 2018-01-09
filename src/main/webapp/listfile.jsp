@@ -19,12 +19,12 @@
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <style type="text/css">
-        body {
-            background: url(images/d.jpg) repeat;
-            background-repeat: no-repeat;
-            background-size: 860px 720px;
-            background-position-x: 50%;
-        }
+        /*body {*/
+            /*background: url(images/d.jpg) repeat;*/
+            /*background-repeat: no-repeat;*/
+            /*background-size: 860px 720px;*/
+            /*background-position-x: 50%;*/
+        /*}*/
 
         #login-box {
             /*border:1px solid #F00;*/
@@ -39,10 +39,7 @@
 
 <body>
 <center>
-    <h1>下载</h1>
-    学生答案：
-    <br>
-
+    <h1>学生答案：</h1>
 
     <%--<!-- 遍历Map集合 -->--%>
     <c:forEach items="${userinform}" var="info">

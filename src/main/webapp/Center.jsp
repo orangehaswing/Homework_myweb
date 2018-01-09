@@ -42,18 +42,33 @@
 
 <center>
     <h1>这是教师主页</h1>
-    <h2>学生作业系统</h2>
+    <h2>教师作业系统</h2>
     <form action="Download" method="post">
-        <tr>
-        <textarea id="homework" name="homework" rows="3" cols="80"></textarea>
-        </tr>
+
+        <br/>
+        作业内容：<select name="class" class="input">
+        <option value="1" selected="selected">第一单元测试</option>
+        <option value="2">第二单元测试</option>
+        <option value="3">第三单元测试</option>
+        <option value="4">第四单元测试</option>
+        </select>
+        <br/>
+        <br/>
+        <input type="button" value="发布" />
+        <input type="reset" value="重置" />
+        <input type="button" value="返回" />
+        <br/>
+
+        <%--<tr>--%>
+        <%--<textarea id="homework" name="homework" rows="3" cols="80"></textarea>--%>
+        <%--</tr>--%>
+        <%--<br>--%>
+        <%--<tr>--%>
+            <%--<td colspan="3" align="center"><input type="submit" value="发布作业"></td>--%>
+        <%--</tr>--%>
         <br>
         <tr>
-            <td colspan="3" align="center"><input type="submit" value="发布作业"></td>
-        </tr>
-        <br>
-        <tr>
-            <td colspan="3" align="center"><input type="submit" value="作业提交名单"></td>
+            <td colspan="3" align="center"><input name="homework" type="submit" value="学生提交作业内容"></td>
         </tr>
     </form>
 

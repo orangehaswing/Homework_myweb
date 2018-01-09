@@ -41,7 +41,10 @@
 
 <body>
 <center>
-    <h1>这是message主页</h1>
+    <h1>学生作业内容</h1>
+    <br/>
+    第一单元测试：请写出泰勒公式
+    <br/>
     <div id="content" name="content" contentEditable="true" class="editDemo">
     ${inform}
     </div>
