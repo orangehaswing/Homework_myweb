@@ -1,11 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2017/10/18
-  Time: 20:23
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 
@@ -19,13 +12,13 @@
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <style type="text/css">
-        /*body {*/
-            /*background: url(images/d.jpg) repeat;*/
-            /*background-repeat: no-repeat;*/
-            /*background-size: 860px 720px;*/
-            /*background-position-x: 50%;*/
-        /*}*/
-
+        body {
+            font-family: "华文细黑";
+            width: 100%;
+            height:auto;
+            background:url("images/d.jpg") no-repeat;
+            background-size: 100%;
+        }
         #login-box {
             /*border:1px solid #F00;*/
             padding: 35px;
@@ -40,7 +33,6 @@
 <body>
 <center>
     <h1>学生答案：</h1>
-
     <%--<!-- 遍历Map集合 -->--%>
     <c:forEach items="${userinform}" var="info">
         <c:url value="/ListFileServlet" var="downurl">
@@ -51,7 +43,6 @@
         <br>
         </p>
     </c:forEach>
-
 </center>
 </body>
 

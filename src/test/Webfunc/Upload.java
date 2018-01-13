@@ -20,13 +20,10 @@ import java.util.Map;
 
 public class Upload extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    // 上传文件存储目录
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String context = req.getParameter("textarea");
         context = new String(context.getBytes("iso8859-1"), "UTF-8");
-
         //用户名
         String username = req.getParameter("username");
 

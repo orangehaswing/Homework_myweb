@@ -14,7 +14,6 @@ public class regist extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
         String username = request.getParameter("username");
@@ -22,7 +21,6 @@ public class regist extends HttpServlet {
         String rpsw = request.getParameter("rpsw");
         String stdID = request.getParameter("stdID");
         String email = request.getParameter("E-mail");
-
         if (username == null || username.trim().isEmpty()) {
             request.setAttribute("msg", "* 用户不存在");
             request.getRequestDispatcher("/Regist.jsp").forward(request, response);
@@ -48,7 +46,6 @@ public class regist extends HttpServlet {
             request.getRequestDispatcher("/Regist.jsp").forward(request, response);
             return;
         }
-
         user u = new user();
         u.addUser(username, password, stdID, email);
         request.setAttribute("msg", "用户：" + username + "注册成功");

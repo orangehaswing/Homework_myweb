@@ -73,15 +73,4 @@ public class user {
             }
         }
     }
-    //单独测试使用
-   // public static void main(String[] args) {
-//    String psw =new user().findUsername("123");
-//    //String psw =new user().findUsername("123");
-//    System.out.println("这是main 函数");
-//    user u = new user();
-//    u.addUser("345", "345");
-   // }
-
-
-
 }

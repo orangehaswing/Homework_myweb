@@ -39,7 +39,6 @@ public class login extends HttpServlet {
             return;
         }
         if(psw.equals(password)){
-            //request.setAttribute("msg", "用户："+username+",登陆成功");
             if(username.equals("admin")){
                 //teachers and admin login page
                 request.getRequestDispatcher("/Center.jsp").forward(request, response);
